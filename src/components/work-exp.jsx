@@ -1,6 +1,6 @@
 import React from "react";
 
-class Portfolio extends React.Component {
+class WorkExp extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -34,33 +34,44 @@ class Portfolio extends React.Component {
       ],
       about_me: [
         {
-          id: "first-p-port",
+          id: "first-p-work",
           title: "Mentororg",
           position: "Software Developer Intern",
+          duration: "Apr 2020 - Jun 2020",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis.",
+            "Led development of an EdTech application with Python Flask, Ionic (Angular) with the backend being on Postgres. Used opencv to extract questions from images. Hosted it on AWS ec2, used AWS S3 to store static assets.",
         },
         {
-          id: "second-p-port",
+          id: "second-p-work",
           title: "Daphnis Labs",
           position: "Software Developer Intern",
+          duration: "Apr 2020 - Jun 2020",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis.",
+            "Delivered an accounting application using Django Rest and React JS that allows the user to calculate balance and store receipts and payment details.",
         },
         {
-          id: "third-p-port",
+          id: "third-p-work",
           title: "Aidetic",
           position: "Software Developer Intern",
+          duration: "Jun 2019 - Jul 2019",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis.",
+            "Built scrapers using selenium for Python to scrape properties from websites which used angular to retrieve images and property titles, improved performance, reducing scraping time to 50%. Additionally, built an admin panel that lets one add or check the status of DVRs using Flask and jQuery.",
         },
         {
-          id: "fourth-p-port",
+          id: "fourth-p-work",
           title: "Stackraft",
           position: "Software Developer Intern",
-
+          duration: "Jun 2019 - Jul 2019",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis.",
+            "Built a resume parser using python to parse resumes from linkedin. Also worked on integrating slack invite link page.",
+        },
+        {
+          id: "fifth-p-work",
+          title: "Open Source Contribution",
+          position: "",
+          duration: "",
+          content:
+            "Worked on the Mozilla Developer Network website and implemented a feature which allows one to add their Discourse profile link to a user’s MDN profile. Worked on fixing different bugs in the Software Heritage project.",
         },
       ],
     };
@@ -68,7 +79,7 @@ class Portfolio extends React.Component {
 
   render() {
     return (
-      <section id="projects" className="about-mf sect-pt4 route">
+      <section id="workExp" className="about-mf sect-pt4 route">
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
@@ -77,7 +88,7 @@ class Portfolio extends React.Component {
                   <div className="col">
                     <div className="pt-4 pt-md-0">
                       <div className="title-box">
-                        <h5 className="title-left">Projects</h5>
+                        <h5 className="title-left">Work Experience</h5>
                       </div>
                       {this.state.about_me.map((content) => {
                         return (
@@ -88,11 +99,20 @@ class Portfolio extends React.Component {
                               </h5>
                               <span
                                 style={{ color: "grey", fontSize: "1.4rem" }}
-                                key={content.id + "-position"}
+                                key={content.id + "-pos"}
                               >
                                 {content.position ? content.position : ""}
                               </span>
+                              <div>
+                                <span
+                                  style={{ color: "grey", fontSize: "1.2rem" }}
+                                  key={content.id + "-dur"}
+                                >
+                                  {content.duration ? content.duration : ""}
+                                </span>
+                              </div>
                             </div>
+
                             <p className="lead" key={content.id + "-con"}>
                               {content.content}
                             </p>
@@ -111,4 +131,4 @@ class Portfolio extends React.Component {
   }
 }
 
-export default Portfolio;
+export default WorkExp;

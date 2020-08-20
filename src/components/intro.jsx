@@ -14,7 +14,7 @@ class Intro extends React.Component {
         <div className="intro-content display-table">
           <div className="table-cell">
             <div className="container">
-              <h1 className="intro-title mb-4">Hello, I am XYZ</h1>
+              <h1 className="intro-title mb-4">Hello, I am Mihir.</h1>
               <p className="intro-subtitle">
                 <span className="text-slider-items"></span>
                 <strong className="text-slider">
@@ -22,7 +22,7 @@ class Intro extends React.Component {
                     strings={[
                       "Front End Developer",
                       "Back End Developer",
-                      "Software Engineer"
+                      "Software Engineer",
                     ]}
                     typeSpeed={80}
                     backDelay={1100}
@@ -31,18 +31,16 @@ class Intro extends React.Component {
                   />
                 </strong>
               </p>
-              <p className="pt-3">
-                <a
-                  className="btn btn-primary btn js-scroll px-4"
-                  href="#work"
-                  role="button"
-                >
-                  View My Work
-                </a>
-              </p>
             </div>
           </div>
         </div>
+        {/* <div className="arrow bounce">
+          <a
+            className="js-scroll fa fa-arrow-down fa-2x"
+            href="#about"
+            role="button"
+          ></a>
+        </div> */}
       </div>
     );
   }
